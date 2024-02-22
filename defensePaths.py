@@ -35,7 +35,7 @@ def BaseballSeams(step, numSeams, B, F = 1):
 def CircleXZ( radius = 1):
     x = spaceJamClasses.xz.circleIncrement
     theta = x
-    unitVec = Vec3(50.0 * math.cos(theta),  50.0 * math.tan(theta))
+    unitVec = Vec3(50.0 * math.cos(theta), 0 * math.sin(theta),  50.0 * math.tan(theta))
     spaceJamClasses.xz.circleIncrement += 1
     return unitVec * radius
 
@@ -44,7 +44,7 @@ def CircleXZ( radius = 1):
 def CircleXY(radius = 10):
     x = spaceJamClasses.xy.circleIncrement
     theta = x
-    unitVec = Vec3(50.0 * math.cos(theta),  50.0 * math.sin(theta))
+    unitVec = Vec3(50.0 * math.cos(theta),  50.0 * math.sin(theta), 0 * math.tan(theta) )
     spaceJamClasses.xy.circleIncrement += 1
     return unitVec * radius
     
@@ -53,6 +53,6 @@ def CircleXY(radius = 10):
 def CircleYZ(radius = 10):
     x = spaceJamClasses.yz.circleIncrement
     theta = x
-    unitVec = Vec3(50.0 * math.sin(theta),  50.0 * math.tan(theta))
+    unitVec = Vec3(0 * math.cos(theta), 50.0 * math.sin(theta),  50.0 * math.tan(theta))
     spaceJamClasses.yz.circleIncrement += 1
     return unitVec * radius
